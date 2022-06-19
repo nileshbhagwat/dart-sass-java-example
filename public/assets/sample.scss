@@ -1,0 +1,55 @@
+@use "sass:math";@use "sass:map";@use "sass:color";@use "sass:list";@use "sass:meta";
+
+@charset 'utf-8';
+
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+$heading-color: #66ce62;
+$text-color: #1d1f2f;
+
+// ==========================================================================
+// Theme-able config which will be populated in server side.
+// ==========================================================================
+// #CUSTOM_THEME_VARIABLES#
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  header {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      padding: 2rem;
+      margin-left: 1rem;
+      font-weight: 300;
+      color: $heading-color;
+    }
+    p,
+    span,
+    div,
+    ul {
+      color: $text-color;
+    }
+  }
+  main {
+    max-width: 700px;
+    margin: auto;
+    ul {
+      list-style: none;
+      .list-item {
+        padding: math.div(1, 2) * 1rem;
+      }
+    }
+  }
+}
